@@ -1,7 +1,6 @@
-package sec03.ex01;
+package sec04.ex02;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class FirstServlet
  */
-//@WebServlet("/firstServlet")
+@WebServlet("/firstServlet")
 public class FirstServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -21,9 +20,11 @@ public class FirstServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
-		PrintWriter out = response.getWriter();
-		RequestDispatcher dispatch = request.getRequestDispatcher("secondServlet?name=kim");
+		request.setAttribute("address", "서울시 동작구");
+		RequestDispatcher dispatch = request.getRequestDispatcher("secondServlet");
 		dispatch.forward(request, response);
 	}
 
