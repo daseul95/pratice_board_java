@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+id="WebApp_ID" version="3.0">
+ <jsp-config>
+ <jsp-property-group>
+ <url-pattern>/view/*</url-pattern>
+ <include-prelude>/common/variable.jspf</include-prelude>
+ <include-coda>/common/footer.jspf</include-coda>
+ </jsp-property-group>
+ </jsp-config>
   <display-name>pro09</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -19,4 +29,18 @@
     <param-name>debugLevel</param-name>
     <param-value>5</param-value>
   </context-param>
+  <error-page>
+  <error-code>404</error-code>
+  <location>/error/error404.jsp</location>
+  </error-page>
+  
+  <error-page>
+  <error-code>500</error-code>
+  <location>/error/error400.jsp</location>
+  </error-page>
+  
+  <error-page>
+  <exception-type>java.lang.NullPointerException</exception-type>
+  <location>/error/errorNullPointer.jsp</location>
+  </error-page>
 </web-app>
