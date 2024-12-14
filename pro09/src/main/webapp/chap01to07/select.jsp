@@ -7,7 +7,7 @@
 <title>옵션 선택 화면</title>
 </head>
 <body>
-<form action ="<%=request.getContextPath()%>/view.jsp">
+<form action ="<%=request.getContextPath()%>/chap01to07/view.jsp">
 보고 싶은 페이지 선택:
 <select name="code">
 <option value="A">A페이지</option>

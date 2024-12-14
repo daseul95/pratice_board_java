@@ -4,15 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>include 디렉티브</title>
+<title>main</title>
 </head>
 <body>
 
-<% int number= 10; %>
+main.jsp에서 생성한 내용
 
-<%@ include file="/includee.jspf" %>
+<jsp:include page="/chap01to07/sub.jsp" flush="false" />
 
-공통변수 DATAFOLER = "<%= dataFolder %>"
+include 이후의 내용.
+
 
 </body>
 </html>

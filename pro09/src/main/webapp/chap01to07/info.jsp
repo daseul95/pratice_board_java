@@ -16,7 +16,7 @@
 </tr>
 </table>
 
-<jsp:include page="infoSub.jsp" flush="false">
+<jsp:include page="/chap01to07/infoSub.jsp" flush="false">
 <jsp:param name="type" value="A"/>
 </jsp:include>
 </body>

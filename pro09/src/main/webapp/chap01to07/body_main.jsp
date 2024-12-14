@@ -12,7 +12,7 @@
  
 <hr>
  
- <jsp:include page= "body_sub.jsp" flush="false">
+ <jsp:include page= "/chap01to07/body_sub.jsp" flush="false">
  <jsp:param name="name" value="최범균"/>
  </jsp:include>
  
